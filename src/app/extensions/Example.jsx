@@ -28,18 +28,22 @@ const Extension = ({ actions }) => {
 
  useEffect(() => {
    fetchCrmObjectProperties(["firstname", "lastname"]).then((resp) =>
-     setProperties(resp)
-   );
+{
+  console.log('fetch crm properties')
+  setProperties(resp)
+}   );
  }, []);
 
 
  onCrmPropertiesUpdate(["firstname", "lastname"], (properties) => {
+  console.log('on properties update')
    setProperties(properties);
  });
 
 
  return (
    <>
+teyeyeyeysdasd!!
      <Flex direction="column" gap="md">
        <Heading>Change properties here</Heading>
        <Text>
